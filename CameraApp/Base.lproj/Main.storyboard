@@ -20,8 +20,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVf-gq-IQq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="iB5-aL-cWg">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="eyF-S9-aJK">
+                                        <connections>
+                                            <action selector="actionButtonWasTapped:" destination="BYZ-38-t0r" id="gxQ-Qq-XcO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykm-3R-ARe">
                                 <rect key="frame" x="172" y="589" width="31" height="30"/>
                                 <state key="normal" title="撮る"/>
@@ -30,10 +40,13 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rVf-gq-IQq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B1z-Uv-A6r"/>
                             <constraint firstItem="rVf-gq-IQq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FrU-ZX-xfp"/>
+                            <constraint firstItem="iB5-aL-cWg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IG0-fk-JWP"/>
+                            <constraint firstAttribute="bottom" secondItem="iB5-aL-cWg" secondAttribute="bottom" id="J2Y-R9-JWv"/>
+                            <constraint firstItem="iB5-aL-cWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TRo-n6-7fG"/>
                             <constraint firstItem="rVf-gq-IQq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="cv8-bb-UBV"/>
                             <constraint firstItem="Ykm-3R-ARe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fF7-qq-8eW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ykm-3R-ARe" secondAttribute="bottom" constant="48" id="kvA-YC-M5n"/>
@@ -43,6 +56,8 @@
                     </view>
                     <connections>
                         <outlet property="previewView" destination="rVf-gq-IQq" id="l58-5v-GXR"/>
+                        <outlet property="shareButton" destination="Ykm-3R-ARe" id="CRc-63-KIm"/>
+                        <outlet property="shutterButton" destination="Ykm-3R-ARe" id="JAe-r4-ZJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
